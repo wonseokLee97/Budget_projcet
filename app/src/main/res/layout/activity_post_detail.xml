@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfdfd"
+    tools:context=".PostDetailActivity">
+
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="0.75dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="8dp"
+        android:background="#63838383"
+        app:layout_constraintEnd_toStartOf="@+id/post_report_butoon"
+        app:layout_constraintTop_toTopOf="@+id/post_report_butoon" />
+
+    <ImageButton
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:background="@null"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/comment_num"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:srcCompat="@drawable/refresh_btn" />
+
+    <TextView
+        android:id="@+id/comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/post_report_butoon"
+        android:layout_width="35dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="7dp"
+        android:background="@android:color/white"
+        android:stateListAnimator="@null"
+        android:text="신고"
+        android:textColor="#BAFF0000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="0.75dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="45dp"
+        android:background="#63838383"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Contents_Text_post"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="0.75dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="43dp"
+        android:background="#63838383"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/reply_post"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/round_shape3"
+        android:backgroundTint="#268A8A8A"
+        android:ems="10"
+        android:hint=" 댓글을 입력해주세요"
+        android:imeOptions="actionNone"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="5"
+        android:minLines="0"
+        android:paddingLeft="5dp"
+        android:singleLine="false"
+        android:textColor="@android:color/black"
+        android:textColorHint="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Contents_Text_post"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/image_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:srcCompat="@drawable/person" />
+
+    <ImageButton
+        android:id="@+id/back_btn3"
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/back_icon"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Name"
+        android:textColor="@android:color/secondary_text_light"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/date_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Date"
+        android:textColor="@android:color/secondary_text_light"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/name_post" />
+
+
+    <TextView
+        android:id="@+id/Title_Text_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="안녕하세요"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/post_report_butoon"
+        app:layout_constraintStart_toEndOf="@+id/back_btn3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView4"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/reply_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/commentlist_item" />
+
+    <ImageButton
+        android:id="@+id/clearButton"
+        android:layout_width="39dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/click"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/reply_post"
+        app:layout_constraintEnd_toEndOf="@+id/reply_post"
+        app:layout_constraintTop_toTopOf="@+id/reply_post" />
+
+    <ImageButton
+        android:id="@+id/like_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@null"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:srcCompat="@drawable/like_btn" />
+
+    <TextView
+        android:id="@+id/LikeNum_Text_post"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/round_shape2"
+        android:gravity="center|center_horizontal"
+        android:text="0"
+        android:textColor="@android:color/secondary_text_light"
+        android:textColorHint="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/like_btn"
+        app:layout_constraintEnd_toStartOf="@+id/like_btn"
+        app:layout_constraintTop_toTopOf="@+id/like_btn" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="댓글"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="620dp"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <ImageButton
+        android:id="@+id/write_btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:srcCompat="@drawable/delete_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
